@@ -14,8 +14,10 @@ const request = https.request({
         })
 
         result.on('end', () => {
-            console.log("The HTML DATA: ");
-            console.log(page)
+            //console.log("The HTML DATA for this page: ");
+            //console.log(page)
+
+            const contentTableItems = [...html.matchAll(/ <div class=“vector-toc-text”>(.*?)<\/div>/gm)].map(match => match[1])
         })
     }
 )
