@@ -35,7 +35,7 @@ const request = https.request({
 
             console.log(contentTableItems);
 
-            const headings = [...page.matchAll(/<span class="mw-headline">(.*?)<\/span>/gm).map(match => match[1])]
+            const headings = [...page.matchAll(/<span class="mw-headline" id="(.*?)">(.*?)<\/span>/gm).map(match => match[1])]
             console.log("All the headings: ");
 
             console.log(headings);
