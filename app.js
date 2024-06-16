@@ -27,25 +27,9 @@ const request = https.request({
             //const contentTableItems = [...page.matchAll(/ <span class="vector-toc-numb">(.*?) <\/span>/gm)].map(match => match[1])
 
 
-            const contentTableItems = [...page.matchAll(/<div class="vector-toc-text">(.*?)<\/div>/gm).map(match => match[1])]
+            const contentTableItems = [...page.matchAll(/<div class="vector-toc-text">(.*?)<\/div>/gm).map(match => match[1])]           
 
-    
-           // const contentTableItems2 = [...page.matchAll(/<div class="vector-toc-text"><span class="vector-toc-numb">(.*?)<\/span><span>(.*?)<\/span><\/div>/gm).map(match => match[1])]
-
-
-            const contentTableItems2 = [...page.matchAll(/<div class="vector-toc-text"><span class="vector-toc-numb">2<\/span><span>(.*?)<\/span><\/div>/gm).map(match => match[1])]
-
-            const contentTableItems3 = [...page.matchAll(/<div class="vector-toc-text"><span class="vector-toc-numb">1<\/span><span>History<\/span><\/div>/gm).map(match => match[1])]
-
-            const contentTableItems4 = [...page.matchAll(/<span class="vector-toc-numb">(.*?)<\/span><span>(.*?)<\/span>/gm).map(match => match[1])]
-
-            const contentTableItems5 = [...page.matchAll(/<a class="vector-toc-link" href=(.*?)><div class="vector-toc-text"><span class="vector-toc-numb”>(.*?)<\/span><span>(.*?)<\/span><\/div><\/a>/gm).map(match => match[1])]
-
-            const contentTableItems6 = [...page.matchAll(/<span class="vector-toc-numb”>(.*?)<\/span>/gm).map(match => match[1])]
-
-           
-
-            const contentTableItems7 = [...page.matchAll(/<span class="vector-toc-numb">(.*?)<\/span>/gm).map(match => match[1])]
+            const contentTableItems2 = [...page.matchAll(/<span class="vector-toc-numb">(.*?)<\/span>/gm).map(match => match[1])]
 
 
 		//	/<div class="vector-toc-text"><span class="vector-toc-numb">1<\/span><span>History<\/span><\/div>
@@ -63,12 +47,7 @@ const request = https.request({
             console.log("Content Table Items: ")
 
             console.log(contentTableItems);
-            //console.log(contentTableItems2);
-            //console.log(contentTableItems3);
-            //console.log(contentTableItems4);
-            //console.log(contentTableItems5);
-            //console.log(contentTableItems6);
-            console.log(contentTableItems7);
+            console.log(contentTableItems2);
 
             const headings = [...page.matchAll(/<span class="mw-headline" id="(.*?)">(.*?)<\/span>/gm).map(match => match[1])]
             console.log("All the headings: ");
