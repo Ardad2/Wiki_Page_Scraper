@@ -34,6 +34,12 @@ const request = https.request({
 
             const contentTableItems2 = [...page.matchAll(/<div class="vector-toc-text"><span class="vector-toc-numb">2<\/span><span>(.*?)<\/span><\/div>/gm).map(match => match[1])]
 
+            const contentTableItems3 = [...page.matchAll(/<div class="vector-toc-text"><span class="vector-toc-numb">1<\/span><span>History<\/span><\/div>/gm).map(match => match[1])]
+
+
+		//	/<div class="vector-toc-text"><span class="vector-toc-numb">1<\/span><span>History<\/span><\/div>
+
+
 /*            <div class="vector-toc-text">
 				<span class="vector-toc-numb">2</span>
 				<span>Organization and administration</span>
@@ -47,11 +53,12 @@ const request = https.request({
 
             console.log(contentTableItems);
             console.log(contentTableItems2);
+            console.log(contentTableItems3);
 
             const headings = [...page.matchAll(/<span class="mw-headline" id="(.*?)">(.*?)<\/span>/gm).map(match => match[1])]
             console.log("All the headings: ");
 
-            console.log(headings);
+            //console.log(headings);
 
 
 
